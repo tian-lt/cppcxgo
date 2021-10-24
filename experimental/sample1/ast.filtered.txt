@@ -1,0 +1,24 @@
+ON DECLARATION 
+    1.4   AST_FUNCDEFN "main" "int (void)"/0  ClosingSFA: (4.0)
+    2.0     AST_COMPOUND  ClosingSFA: (4.0)
+    3.4       AST_RETURN
+    3.11        AST_CONSTANT =0 "int"/4
+ON FUNCTION 
+    5.0   AST_FUNCDEFN "?<Dispose>@IDisposable@Platform@@U$AAAXXZ" "void (void)"/0  ClosingSFA: (5.0)
+    5.0     AST_COMPOUND  ClosingSFA: (5.0)
+    5.0       AST_DECLARATION "__hr" "long"/4
+    5.0         AST_FUNCTIONCALL FC_VIRTUAL "long"/4
+    5.0           AST_ARROW "long (void)"/0
+    5.0             AST_SYMBOL "this" "struct Platform::IDisposable ^const "/4
+    5.0             AST_SYMBOL "?__abi_<Dispose>@IDisposable@Platform@@U$AAGJXZ" "long (void)"/0
+    5.0           AST_ARGUMENTS
+                  NULL
+    5.0       AST_EXPRESSION
+    5.0         AST_FUNCTIONCALL FC_DIRECT "void"/0
+    5.0           AST_SYMBOL "?__abi_ThrowIfFailed@@YAXJ@Z" "void (long)"/0
+    5.0           AST_ARGUMENTS
+    5.0             AST_SYMBOL "__hr" "long"/4
+                  NULL
+    5.0       AST_RETURN*
+                NULL
+ON FUNCTION 
