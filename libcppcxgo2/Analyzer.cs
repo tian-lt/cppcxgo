@@ -1,4 +1,7 @@
 using Libcppcxgo2.Literals;
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Libcppcxgo2
 {
@@ -11,11 +14,14 @@ namespace Libcppcxgo2
         {
             _config = runConfig;
             _psctx = new PSContext();
-            _psctx.RunScript(AnalyzerScripts.Initialization(runConfig.VCToolsHome));
+            _psctx.RunScript(AnalyzerScripts.Initialization(
+                vstoolsHome: runConfig.VCToolsHome,
+                workingDir: runConfig.WorkingDirectory));
         }
 
-        public void ParseFile(string filename)
+        public async Task ParseFile(string filename)
         {
+            await _psctx.RunScriptAsync(AnalyzerScripts.Compile(filename));
         }
 
         public void ParseContent(string content)

@@ -14,5 +14,6 @@ namespace Libcppcxgo2
         }
 
         public string VCToolsHome { get; set; }
+        public string WorkingDirectory { get; set; }
     }
 }
